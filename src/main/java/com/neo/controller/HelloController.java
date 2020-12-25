@@ -9,7 +9,13 @@ public class HelloController {
 
     @Value("${server.servlet.context-path}")
     private String info;
-	
+
+    @RequestMapping(value = "/postJson" , method = RequestMethod.POST)
+    public String writeAppLog(@RequestBody String content) throws Exception {
+        return content;
+    }
+    
+
     @RequestMapping("/")
     public String index() {
        // return "Hello Spring Boot 2.0!";
