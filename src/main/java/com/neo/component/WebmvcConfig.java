@@ -4,11 +4,12 @@ import com.neo.interceptor.InterceptorDemo;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
 
-@Configuration
-public class WebmvcConfig extends WebMvcConfigurerAdapter {
+@Configuration //WebMvcConfigurerAdapter
+public class WebmvcConfig extends WebMvcConfigurationSupport {
 
 	@Override
 	public void addInterceptors(InterceptorRegistry registry) {
